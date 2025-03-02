@@ -1,6 +1,6 @@
 # InfoGathering
 
-*git clone https://github.com/deepammali/WebInfoFinder*
+*git clone https://github.com/jiawei64850/webInfoFinder/tree/main*
 
 *cd WebInfoFinder*
 
