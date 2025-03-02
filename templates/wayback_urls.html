@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wayback_urls</title>
+</head>
+<body>
+    <img src="/templates/Webinfofinder.png" alt="">
+    <form action="{{ url_for('wayback_urls') }}" method="post">
+        <p>Please select your choice</p>
+        <input type="radio" id="status_code_200" name="wayback_urls_choice" value="status_code_200" required>
+        <label for="status_code_200">Status Code 200</label><br>
+        <input type="radio" id="status_code_302" name="wayback_urls_choice" value="status_code_302" required>
+        <label for="status_code_302">Status Code 302</label><br>
+        <input type="radio" id="status_code_403" name="wayback_urls_choice" value="status_code_403" required>
+        <label for="status_code_403">Status Code 403</label><br>
+        <input type="radio" id="status_code_404" name="wayback_urls_choice" value="status_code_404" required>
+        <label for="status_code_404">Status Code 404</label><br>
+        <input type="radio" id="all_urls" name="wayback_urls_choice" value="all_urls" required>
+        <label for="all_urls">ALL urls</label><br><br>
+        <div><input type="submit" value="OK!"></div>
+        <div><input type="reset" value="reset"></div>
+        <div><input type="button" value="back" onclick=history.back()></div>
+    </form>
+</body>
+</html>

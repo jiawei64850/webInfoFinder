@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dorking</title>
+</head>
+<body>
+    <img src="/templates/Webinfofinder.png" alt="">
+    <form action="{{ url_for('dorking') }}" method="post">
+        <label for="keywords">Input your keywords: </label>
+        <input type="text" id="keywords" name="keywords" required><br>
+        <div><input type="submit" value="OK!"></div>
+        <div><input type="reset" value="Beset"></div>
+        <div><input type="button" value="Back" onclick=history.back()></div>
+    </form>
+</body>
+</html>

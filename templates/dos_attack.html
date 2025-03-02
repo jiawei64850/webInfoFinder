@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dos_attack</title>
+</head>
+<body>
+    <img src="/templates/Webinfofinder.png" alt="">
+    <form action="{{ url_for('dos_attack') }}" method="post">
+        <label for="attack_argument">Enter a valid argument for DOS attack:  </label>
+        <input type="text" id="attack_argument" name="attack_argument" required><br>
+        <div>Instruction for typing in:<br></div>
+        <div>g or G   --    Specify GET request <br>
+            p or P    --     Specify POST request <br>
+            t or T    --    Specify the number of threads to be used <br>
+            ah or AH  --    Specify additional headers</div>
+        <div><input type="submit" value="OK!"></div>
+        <div><input type="reset" value="Beset"></div>
+        <div><input type="button" value="Back" onclick=history.back()></div>
+    </form>
+</body>
+</html>

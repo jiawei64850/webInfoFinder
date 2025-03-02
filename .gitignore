@@ -1,0 +1,23 @@
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+
+# Linux specific
+.*~
+
+# Flask session cookies 
+.flask_session/
+
+# VSCode specific (uncomment if you use Visual Studio Code)
+.vscode/
+
+# mypy
+.mypy_cache/
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
