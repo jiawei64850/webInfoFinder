@@ -214,8 +214,8 @@ def iseeverything(choose, victim):
         print('?')
         print()
 
-#下面是一个使用的参考
+# example
 choose = "1"
-victim = "www.baidu.com"  #用ip也可以
+victim = "www.baidu.com"  # or ip
 setNewTarget(False)
 iseeverything(choose, victim)
