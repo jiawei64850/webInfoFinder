@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>choice</title>
+</head>
+<body>
+    <!-- Flash messages display area -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <img src="/templates/Webinfofinder.png" alt="">
+    <form action="{{ url_for('perform_action') }}" method="post">
+    <p>What would you like to do? (1-15): </p>
+    <input type="radio" id="ip_finder" name="choice_type" value="ip_finder">
+    <label for="ip_finder"> 01) IP Finder</label><br>
+    <input type="radio" id="port_scanner" name="choice_type" value="port_scanner">
+    <label for="port_scanner">02) Port Scanner </label><br>
+    <input type="radio" id="wayback_urls" name="choice_type" value="wayback_urls">
+    <label for="wayback_urls">03) WayBack urls</label><br>
+    <input type="radio" id="subdomain_listing" name="choice_type" value="subdomain_listing">
+    <label for="subdomain_listing">04) Subdomain Listing (use Sublistr) </label><br>
+    <input type="radio" id="get_robots" name="choice_type" value="get_robots">
+    <label for="get_robots">05) Get robots.txt</label><br>
+    <input type="radio" id="host_info_scanner" name="choice_type" value="host_info_scanner">
+    <label for="host_info_scanner">06) Host Info Scanner (use WhatWeb) </label><br>
+    <input type="radio" id="dns_lookup" name="choice_type" value="dns_lookup">
+    <label for="dns_lookupe">07) DNS Lookup</label><br>
+    <input type="radio" id="hosts_search" name="choice_type" value="hosts_search">
+    <label for="hosts_search">08) Hosts Search  </label><br>
+    <input type="radio" id="geo_location" name="choice_type" value="geo_location">
+    <label for="geo_location">09) Geo Location</label><br>
+    <input type="radio" id="host_information" name="choice_type" value="host_information">
+    <label for="host_information">10) Host Information</label><br>
+    <input type="radio" id="list_shared_dns_servers" name="choice_type" value="list_shared_dns_servers">
+    <label for="list_shared_dns_servers">11) List Shared DNS Servers</label><br>
+    <input type="radio" id="dorking" name="choice_type" value="dorking">
+    <label for="dorking">12) Dorking</label><br>
+    <input type="radio" id="Check_if_domain_email_spoofable" name="choice_type" value="Check_if_domain_email_spoofable">
+    <label for="Check_if_domain_email_spoofable">13) Check if domain email spoofable</label><br>
+    <input type="radio" id="dos_attack" name="choice_type" value="dos_attack">
+    <label for="dos_attack">14) DOS Attack</label><br>
+    <div><input type="submit" value="OK!"></div>
+    <div><input type="reset" value="reset"></div>
+    <div><input type="button" value="back" onclick=history.back()></div>
+</body>
+</html>

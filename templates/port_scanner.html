@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>port_scanner</title>
+    <style>
+        /* Initially hide the textbox */
+        #textboxContainer {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Body content -->
+    <img src="/templates/Webinfofinder.png" alt="">
+    <form action="{{ url_for('port_scanner') }}" method="post">
+        <!-- Radio buttons for options -->
+        <input type="radio" id="port_number" name="port_choice" value="single_port" onclick="showPortInput(true)">
+        <label for="port_number">Enter port number</label><br>
+        <input type="radio" id="all_ports" name="port_choice" value="all_ports" onclick="showPortInput(false)">
+        <label for="all_ports">All ports (may take a long time)</label><br>
+        <!-- Text input for port number -->
+        <div id="portNumberInput" style="display: none;">
+            <label for="port_number_input">Port Number:</label>
+            <input type="text" id="port_number_input" name="port_number"><br>
+        </div>    
+        <div><input type="submit" value="OK!"></div>
+        <div><input type="reset" value="Reset"></div>
+        <div><input type="button" value="Back" onclick=history.back()></div>
+    </form>
+    <script>
+        function showPortInput(show) {
+            document.getElementById('portNumberInput').style.display = show ? 'block' : 'none';
+        }
+    </script>
+</body>
+</body>
+</html>
+
+

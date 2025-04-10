@@ -1,0 +1,19 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Results</h1>
+    <!-- Display results here -->
+    {{ result }} 
+    
+    <br><br><br>
+    <!-- Use anchor tags to link back to previous pages -->
+    <div><a href="{{ url_for('home') }}">Back to address page</a></div><br>
+    <div><a href="{{ url_for('choice') }}">Back to option page</a></div>
+</body>
+</html>
